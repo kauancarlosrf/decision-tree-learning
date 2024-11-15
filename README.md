@@ -8,7 +8,7 @@ Uma implementação de um algoritmo de **Árvore de Decisão** baseado em entrop
 1. [Descrição](#1-descrição)
 2. [Como Usar](#2-como-usar)
 3. [Exemplo de Funcionamento](#3-exemplo-de-funcionamento)
-4. [Ilustração de uma Árvore](#4-visualização-da-árvore)
+4. [Ilustração de uma Árvore](#4-ilustração-de-uma-árvore)
 
 ---
 
