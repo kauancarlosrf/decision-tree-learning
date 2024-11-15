@@ -5,10 +5,10 @@ Uma implementação de um algoritmo de **Árvore de Decisão** baseado em entrop
 ---
 
 ## Índice
-1. [Descrição](#descrição)
-2. [Como Usar](#como-usar)
-3. [Exemplo de Funcionamento](#exemplo-de-funcionamento)
-4. [Ilustração da Árvore](#visualização-da-árvore)
+1. [Descrição](#1-descrição)
+2. [Como Usar](#2-como-usar)
+3. [Exemplo de Funcionamento](#3-exemplo-de-funcionamento)
+4. [Ilustração da Árvore](#4-visualização-da-árvore)
 
 ---
 
@@ -44,7 +44,7 @@ No log de seu console irá sair as decisões (respostas das árvores).
 ---
 
 
-## 3. Exemplo de Funcionamento:
+## 3. Exemplo de Funcionamento
 
 Há no arquivo dataSet.py um conjunto de dados a respeito de um restaurante e a respeito de partidas de futebol. Ambos serão para criar e treinar árvores diferentes.
 
