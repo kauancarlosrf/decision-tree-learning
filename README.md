@@ -57,14 +57,14 @@ No arquivo arvore.py está de fato o código que cria e treina uma árvore. Ao i
 | caro      | segunda       | não está chovendo | não         |
 | barato    | sexta         | está chovendo     | sim         |
 
-A árvore de decisão gerada seria algo assim:
+Uma árvore de decisão gerada poderia ser algo assim:
 
 Preço?
-├── barato: sim
-├── médio:
-│   ├── Está Chovendo? não: sim
-│   ├── Está Chovendo? sim: não
-└── caro: não
+- barato: sim
+- médio: Está chovendo? 
+  - não: sim
+  - sim: não
+- caro: não
 
 ---
 
@@ -73,4 +73,4 @@ Preço?
 
 Um modo de ilustrar e esquematizar os passos lógicos que a árvore faz é:
 
-![Ilustração](ilustracao_arvore.png)
+![Ilustração de uma Árvore esquematizada para a decisão 'DevoEsperar?'](ilustracao_arvore.png)
