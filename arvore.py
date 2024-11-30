@@ -49,22 +49,22 @@ def construir_arvore(dados_data_set_cru, decisoes_data_set_cru):
     lista_decisoes_data_set = pd.Series(decisoes_data_set_cru)
 
     # Verifica se todas as amostras têm a mesma classe
-    if len(set(classe=lista_decisoes_data_set.iloc[0])) == 1:
-        return No(folha=True, classe=classe=lista_decisoes_data_set.iloc[0].iloc[0])
+    if len(set(lista_decisoes_data_set)) == 1:
+        return No(folha=True, classe=lista_decisoes_data_set.iloc[0])
     
     # Se não houver atributos restantes, retorna a classe majoritária
     if data_set.empty:
-        classe_majoritaria = classe=lista_decisoes_data_set.iloc[0].mode()[0]
+        classe_majoritaria = lista_decisoes_data_set.mode()[0]
         return No(folha=True, classe=classe_majoritaria)
 
     # Encontrar o melhor atributo para dividir
-    melhor_atributo = encontrar_abtributo_com_ganho_informacao_maximo(data_set, classe=lista_decisoes_data_set.iloc[0])
+    melhor_atributo = encontrar_abtributo_com_ganho_informacao_maximo(data_set, lista_decisoes_data_set)
     raiz = No(atributo=melhor_atributo)
     
     # Criar nós filhos para cada valor do atributo
     for valor in data_set[melhor_atributo].unique():
         data_set_sub = data_set[data_set[melhor_atributo] == valor].drop(columns=melhor_atributo)
-        lista_decisoes_data_set_sub = classe=lista_decisoes_data_set.iloc[0][data_set[melhor_atributo] == valor]
+        lista_decisoes_data_set_sub = lista_decisoes_data_set[data_set[melhor_atributo] == valor]
         
         filho = construir_arvore(data_set_sub, lista_decisoes_data_set_sub)
         filho.valor = valor
@@ -80,4 +80,3 @@ def prever(arvore, exemplo):
         if arvore is None:
             return None  # Caso não encontre um caminho
     return arvore.classe
-

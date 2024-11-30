@@ -79,4 +79,3 @@ for amostra in dataSetFutebol:
     
     data_frame_dados_futebol.append(atributos)
     data_frame_decisoes_futebol.append(classe)
-
