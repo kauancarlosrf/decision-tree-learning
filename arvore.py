@@ -4,6 +4,7 @@ from collections import Counter
 
 
 # Função para calcular a entropia
+# Function to calculate entropy
 def calcular_entropia(y):
     contagem_classes = Counter(y)
     cardinalidade_do_conjunto = len(y)
@@ -14,6 +15,7 @@ def calcular_entropia(y):
     return entropia
 
 # Função para calcular o ganho de informação
+# Function to calculate information gain
 def calcular_ganho_informacao(X, pai, atributo):
     entropia_total_pai = calcular_entropia(pai)
     ramos_de_divisoes_para_os_filhos, lista_cardinalidades_filhos = np.unique(X[atributo], return_counts=True)
@@ -28,12 +30,14 @@ def calcular_ganho_informacao(X, pai, atributo):
     return ganho_informacao
 
 # Função para encontrar o melhor atributo para dividir os dados
+# Function to find the best attribute to split the data
 def encontrar_abtributo_com_ganho_informacao_maximo(data_set, lista_decisoes):
     ganhos = {atributo: calcular_ganho_informacao(data_set, lista_decisoes, atributo) for atributo in data_set.columns}
     #print(ganhos)
     return max(ganhos, key=ganhos.get)
 
 # Definição da classe do nó da árvore de decisão
+# Definition of the decision tree node class
 class No:
     def __init__(self, atributo=None, valor=None, folha=False, classe=None, filhos=None):
         self.atributo = atributo
@@ -43,25 +47,31 @@ class No:
         self.filhos = filhos or []
 
 # Função para construir a árvore de decisão recursivamente
+# Function to recursively build the decision tree
 def construir_arvore(dados_data_set_cru, decisoes_data_set_cru):
     # Arrumando dados
+    # Organizing data
     data_set = pd.DataFrame(dados_data_set_cru)
     lista_decisoes_data_set = pd.Series(decisoes_data_set_cru)
 
     # Verifica se todas as amostras têm a mesma classe
+    # Check if all samples have the same class
     if len(set(lista_decisoes_data_set)) == 1:
         return No(folha=True, classe=lista_decisoes_data_set.iloc[0])
     
     # Se não houver atributos restantes, retorna a classe majoritária
+    # If there are no remaining attributes, return the majority class
     if data_set.empty:
         classe_majoritaria = lista_decisoes_data_set.mode()[0]
         return No(folha=True, classe=classe_majoritaria)
 
     # Encontrar o melhor atributo para dividir
+    # Find the best attribute to split the data
     melhor_atributo = encontrar_abtributo_com_ganho_informacao_maximo(data_set, lista_decisoes_data_set)
     raiz = No(atributo=melhor_atributo)
     
     # Criar nós filhos para cada valor do atributo
+    # Create child nodes for each value of the attribute
     for valor in data_set[melhor_atributo].unique():
         data_set_sub = data_set[data_set[melhor_atributo] == valor].drop(columns=melhor_atributo)
         lista_decisoes_data_set_sub = lista_decisoes_data_set[data_set[melhor_atributo] == valor]
@@ -73,10 +83,13 @@ def construir_arvore(dados_data_set_cru, decisoes_data_set_cru):
     return raiz
 
 # Função para fazer previsões com a árvore de decisão
+# Function to make predictions with the decision tree
 def prever(arvore, exemplo):
     while not arvore.folha:
         atributo_valor = exemplo[arvore.atributo]
         arvore = next((filho for filho in arvore.filhos if filho.valor == atributo_valor), None)
         if arvore is None:
             return None  # Caso não encontre um caminho
-    return arvore.classe
+            # If no path is found
+    return arvore.classe  # Retorna a classe do nó folha
+    # Returns the class of the leaf node

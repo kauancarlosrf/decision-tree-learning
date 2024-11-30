@@ -1,5 +1,6 @@
 # Exemplo de dados
 
+
 dataSetRestaurante = [
     {'preço': 'caro', 'dia_da_semana': 'sexta', 'está_chovendo': 'sim', 'vai_esperar': 'sim'},
     {'preço': 'médio', 'dia_da_semana': 'sexta', 'está_chovendo': 'não', 'vai_esperar': 'sim'},
@@ -24,7 +25,6 @@ for amostra in dataSetRestaurante:
     data_frame_decisoes_restaurante.append(classe)
 
 
-# Novo dataset para prever o resultado de um jogo de futebol com 50 casos
 dataSetFutebol = [
     {'temperatura': 'quente', 'hora_do_jogo': 'tarde', 'condicao_do_campo': 'bom', 'resultado': 'talvez'},
     {'temperatura': 'frio', 'hora_do_jogo': 'manha', 'condicao_do_campo': 'ruim', 'resultado': 'talvez'},
@@ -85,25 +85,25 @@ for amostra in dataSetFutebol:
 dataSetRestaurantBook = [
     {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Some", "Price": "$$$", "Rain": "No", "Res": "Yes", "Type": "French", "Est": "0-10", "WillWait": "Yes"},
     {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "Yes", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
-   # {"Alt": "No", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Some", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "Yes", "Bar": "No", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "Yes", "Res": "Yes", "Type": "Thai", "Est": "10-30", "WillWait": "Yes"},
-   # {"Alt": "Yes", "Bar": "No", "Fri": "No", "Hun": "No", "Pat": "Full", "Price": "$$$", "Rain": "No", "Res": "Yes", "Type": "French", "Est": ">60", "WillWait": "No"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Some", "Price": "$$", "Rain": "Yes", "Res": "No", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "No", "Bar": "No", "Fri": "No", "Hun": "No", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "No"},
-   # {"Alt": "No", "Bar": "No", "Fri": "No", "Hun": "Yes", "Pat": "Some", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Thai", "Est": ">60", "WillWait": "Yes"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "Full", "Price": "$$$", "Rain": "No", "Res": "Yes", "Type": "Burger", "Est": "10-30", "WillWait": "No"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
-   # {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
-   # {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"}
+    {"Alt": "No", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Some", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "Yes", "Bar": "No", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "Yes", "Res": "Yes", "Type": "Thai", "Est": "10-30", "WillWait": "Yes"},
+    {"Alt": "Yes", "Bar": "No", "Fri": "No", "Hun": "No", "Pat": "Full", "Price": "$$$", "Rain": "No", "Res": "Yes", "Type": "French", "Est": ">60", "WillWait": "No"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Some", "Price": "$$", "Rain": "Yes", "Res": "No", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "No", "Bar": "No", "Fri": "No", "Hun": "No", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "No"},
+    {"Alt": "No", "Bar": "No", "Fri": "No", "Hun": "Yes", "Pat": "Some", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Thai", "Est": ">60", "WillWait": "Yes"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "Full", "Price": "$$$", "Rain": "No", "Res": "Yes", "Type": "Burger", "Est": "10-30", "WillWait": "No"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "WillWait": "Yes"},
+    {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "WillWait": "No"},
+    {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "WillWait": "Yes"}
     
 ]
 
