@@ -73,4 +73,4 @@ Preço?
 
 Um modo de ilustrar e esquematizar os passos lógicos que a árvore faz é:
 
-![Ilustração de uma Árvore esquematizada para a decisão 'DevoEsperar?'](ilustracao_arvore.png)
+![Ilustração de uma Árvore esquematizada para a decisão 'DevoEsperar?'](./image/ilustracao_arvore.png)

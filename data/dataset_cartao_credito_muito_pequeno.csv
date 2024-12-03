@@ -1,0 +1,24 @@
+idade,renda_mensal,score_credito,dividas,tempo_emprego,tipo_residencia,historico_pagamento,idade_conta_bancaria,numero_cartoes_ativos,limite_cartao_anterior,regiao_residencia,possui_carro,possui_imovel,numero_dependentes,historico_criminal,ocupacao,educacao,gastos_mensais,tempo_residencia_atual,decisao*
+35,4000,750,sim,3-5 anos,casa,bom,10,2,3000,sul,sim,sim,2,sim,empregado,ensino superior,1500,5,sim
+30,3000,650,não,1-3 anos,apartamento,ruim,2,1,1000,leste,não,não,0,não,autônomo,ensino médio,1000,1,não
+45,6000,800,sim,10+ anos,casa,bom,5,3,5000,oeste,sim,sim,3,sim,empregado,ensino superior,2500,10,sim
+25,2000,600,não,3-5 anos,apartamento,ruim,1,1,1000,norte,não,não,1,não,desempregado,ensino fundamental,1500,3,não
+35,4000,750,sim,5-10 anos,casa,bom,2,2,3000,leste,sim,sim,0,sim,empregado,ensino superior,2000,5,sim
+30,3000,700,não,3-5 anos,casa,bom,5,2,3000,sul,não,sim,2,sim,empregado,ensino médio,1500,5,sim
+40,5000,700,não,1-3 anos,apartamento,ruim,1,1,1000,norte,sim,sim,1,não,empregado,ensino médio,1000,1,não
+45,6000,800,sim,10+ anos,casa,bom,5,3,5000,sul,sim,sim,3,sim,empregado,ensino superior,2500,10,sim
+30,3000,650,não,5-10 anos,apartamento,bom,2,2,3000,oeste,não,não,0,sim,autônomo,ensino médio,1500,3,não
+35,4000,750,sim,3-5 anos,casa,bom,2,2,3000,norte,sim,sim,2,sim,empregado,ensino superior,2000,5,sim
+40,5000,700,não,10+ anos,casa,ruim,10,3,5000,leste,sim,não,0,não,empregado,ensino médio,2500,10,sim
+25,2000,600,sim,3-5 anos,apartamento,bom,2,1,1000,sul,não,sim,1,sim,autônomo,ensino fundamental,1000,3,sim
+35,4000,750,não,5-10 anos,apartamento,ruim,5,2,3000,oeste,não,sim,0,não,empregado,ensino superior,1500,5,não
+30,3000,650,sim,1-3 anos,casa,bom,1,1,1000,leste,sim,sim,0,sim,empregado,ensino médio,1500,5,sim
+40,5000,700,não,1-3 anos,apartamento,bom,5,3,5000,sul,sim,sim,1,não,empregado,ensino médio,1000,5,não
+45,6000,800,sim,10+ anos,casa,ruim,10,2,5000,oeste,não,sim,2,sim,autônomo,ensino superior,2500,10,sim
+30,3000,650,sim,1-3 anos,apartamento,ruim,2,1,1000,norte,sim,sim,1,sim,empregado,ensino superior,1500,3,sim
+35,4000,750,não,3-5 anos,casa,bom,5,3,3000,leste,não,não,0,não,empregado,ensino médio,2000,5,não
+25,2000,600,sim,3-5 anos,casa,bom,1,1,1000,norte,sim,sim,1,não,desempregado,ensino fundamental,1000,3,sim
+45,6000,800,sim,10+ anos,apartamento,bom,5,2,5000,oeste,sim,sim,3,sim,empregado,ensino superior,2500,10,sim
+30,3000,650,não,3-5 anos,casa,bom,5,1,3000,leste,não,não,0,sim,empregado,ensino médio,1500,5,não
+40,5000,700,não,10+ anos,apartamento,ruim,5,3,5000,norte,sim,sim,2,não,autônomo,ensino superior,2000,10,sim
+35,4000,750,sim,5-10 anos,casa,bom,2,1,1000,sul,não,não,1,sim,empregado,ensino superior,1500,5,sim
