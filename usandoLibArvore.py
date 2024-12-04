@@ -1,6 +1,8 @@
 import pandas as pd
 from arvore import construir_arvore, prever
 from data.dataSet import dataSetRestaurante, dataSetRestaurantBook, dataSetFutebol
+from data.splitData import split_data
+from validacao import validar_modelo
 
 
 # Build the trained tree on the RESTAURANT DataSet
@@ -28,7 +30,7 @@ print("Decisão 1 árvore-restaurant-book:", prever(arvore_restaurant_book, novo
 print("Decisão 2 árvore-restaurant-book:", prever(arvore_restaurant_book, novo_exemplo32))  # Espera "Yes" ou "No" com base na árvore
 
 # Build the trained tree on the CREDIT DataSet (attempt of a real example)
-arvore_credito = construir_arvore(pd.read_csv('dataset_credito_10000_linhas_balanceadas.csv'))
+arvore_credito1 = construir_arvore(pd.read_csv('./data/dataset_credito_10000_linhas_balanceadas.csv'))
 # Testing the decision tree on a new example
 novo_exemplo41 = {
     'idade': 30,
@@ -51,26 +53,9 @@ novo_exemplo41 = {
     'gastos_mensais': 2000,
     'tempo_residencia_atual': 3
 }
+print("Decisão 1 árvore-credito:", prever(arvore_credito1, novo_exemplo41))  # Espera "Sim" ou "Não" com base na árvore
 
-novo_exemplo_42 = {
-    'idade': 40,
-    'renda_mensal': 5000,
-    'score_credito': 750,
-    'dividas': 'sim',
-    'tempo_emprego': '3-5 anos',
-    'tipo_residencia': 'apartamento',
-    'historico_pagamento': 'ruim',
-    'idade_conta_bancaria': 10,
-    'numero_cartoes_ativos': 1,
-    'limite_cartao_anterior': 1000,
-    'regiao_residencia': 'norte',
-    'possui_carro': 'não',
-    'possui_imovel': 'não',
-    'numero_dependentes': 1,
-    'historico_criminal': 'sim',
-    'ocupacao': 'autônomo',
-    'educacao': 'ensino médio',
-    'gastos_mensais': 2500,
-    'tempo_residencia_atual': 5
-}
-print("Decisão 1 árvore-credito:", prever(arvore_credito, novo_exemplo41))  # Espera "Sim" ou "Não" com base na árvore
+dataFrameTreinoCredito, dataFrameValidacaoCredito = split_data(pd.read_csv('./data/dataset_credito_30_linhas.csv'))
+arvore_credito2 = construir_arvore(dataFrameTreinoCredito)
+validar_modelo(arvore_credito2, dataFrameValidacaoCredito)
+
