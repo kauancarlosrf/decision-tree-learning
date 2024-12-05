@@ -20,4 +20,5 @@ def validar_modelo(arvore, conjunto_validacao):
 
     proporcao_acertos = acertos / total
     print(f"Proporção de acertos: {proporcao_acertos:.2%}")
+    print(f"Acertos: {acertos} / Total: {total}")
     return proporcao_acertos

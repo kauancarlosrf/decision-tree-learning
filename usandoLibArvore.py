@@ -1,8 +1,8 @@
 import pandas as pd
 from arvore import construir_arvore, prever
-from data.dataSet import dataSetRestaurante, dataSetRestaurantBook, dataSetFutebol
+from data.dataSet import dataSetRestaurante, dataSetRestaurantBook, dataSetRestaurantBook2, dataSetFutebol
 from data.splitData import split_data
-from validacao import validar_modelo
+from validacao.validacao import validar_modelo
 
 
 # Build the trained tree on the RESTAURANT DataSet
@@ -21,16 +21,22 @@ novo_exemplo22 = {'temperatura': 'medio', 'hora_do_jogo': 'manha', 'condicao_do_
 print("Decisão 1 árvore-futebol:", prever(arvore_futebol, novo_exemplo21))  # Espera "perder" ou "ganhar" com base na árvore
 print("Decisão 2 árvore-futebol:", prever(arvore_futebol, novo_exemplo22))  # Espera "perder" ou "ganhar" com base na árvore
 
+
+dataFrameTreinoRestaurantBook, dataFrameValidacaoRestaurantBook = split_data(pd.DataFrame(dataSetRestaurantBook2))
+# esta dando erro: dataFrameTreinoRestaurantBook, dataFrameValidacaoRestaurantBook = split_data(pd.read_csv('./data/restaurantBook/dataset_restaurant_100_linhas.csv'))
 # Build the trained tree on the RESTAURANT BOOK DataSet (example from the reference book)
-arvore_restaurant_book = construir_arvore(dataSetRestaurantBook)
+
+arvore_restaurant_book = construir_arvore(dataFrameTreinoRestaurantBook)
 # Testing the decision tree on a new example
 novo_exemplo31 = {'Alt': 'No', 'Bar': 'No', 'Fri': 'Yes', 'Hun': 'Yes', 'Pat': 'Some', 'Price': '$$$', 'Rain': 'No', 'Res': 'Yes', 'Type': 'French', 'Est': '0-10'}
 novo_exemplo32 = {'Alt': 'Yes', 'Bar': 'No', 'Fri': 'No', 'Hun': 'No', 'Pat': 'Full', 'Price': '$$$', 'Rain': 'Yes', 'Res': 'No', 'Type': 'Italian', 'Est': '>60'}
 print("Decisão 1 árvore-restaurant-book:", prever(arvore_restaurant_book, novo_exemplo31))  # Espera "Yes" ou "No" com base na árvore
 print("Decisão 2 árvore-restaurant-book:", prever(arvore_restaurant_book, novo_exemplo32))  # Espera "Yes" ou "No" com base na árvore
+validar_modelo(arvore_restaurant_book, dataFrameValidacaoRestaurantBook)
 
 # Build the trained tree on the CREDIT DataSet (attempt of a real example)
-arvore_credito1 = construir_arvore(pd.read_csv('./data/dataset_credito_10000_linhas_balanceadas.csv'))
+dataFrameTreinoCredito, dataFrameValidacaoCredito = split_data(pd.read_csv('./data/credito/dataset_credito_10000_linhas_balanceadas.csv'))
+arvore_credito = construir_arvore(dataFrameTreinoCredito)
 # Testing the decision tree on a new example
 novo_exemplo41 = {
     'idade': 30,
@@ -53,9 +59,6 @@ novo_exemplo41 = {
     'gastos_mensais': 2000,
     'tempo_residencia_atual': 3
 }
-print("Decisão 1 árvore-credito:", prever(arvore_credito1, novo_exemplo41))  # Espera "Sim" ou "Não" com base na árvore
+print("Decisão 1 árvore-credito:", prever(arvore_credito, novo_exemplo41))  # Espera "Sim" ou "Não" com base na árvore
 
-dataFrameTreinoCredito, dataFrameValidacaoCredito = split_data(pd.read_csv('./data/dataset_credito_30_linhas.csv'))
-arvore_credito2 = construir_arvore(dataFrameTreinoCredito)
-validar_modelo(arvore_credito2, dataFrameValidacaoCredito)
-
+validar_modelo(arvore_credito, dataFrameValidacaoCredito)

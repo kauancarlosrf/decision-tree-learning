@@ -1,0 +1,16 @@
+digraph arvore_restaurante {
+	graph [ranksep=2 size="1000,1000"]
+	"" [label="preço"]
+	"" -> "->caro" [label=caro]
+	"->caro" [label=sim color=lightgrey shape=box style=filled]
+	"" -> "->médio" [label="médio"]
+	"->médio" [label=dia_da_semana]
+	"->médio" -> "->médio->sexta" [label=sexta]
+	"->médio->sexta" [label=sim color=lightgrey shape=box style=filled]
+	"->médio" -> "->médio->sábado" [label="sábado"]
+	"->médio->sábado" [label=sim color=lightgrey shape=box style=filled]
+	"->médio" -> "->médio->segunda" [label=segunda]
+	"->médio->segunda" [label="não" color=lightgrey shape=box style=filled]
+	"" -> "->barato" [label=barato]
+	"->barato" [label=sim color=lightgrey shape=box style=filled]
+}

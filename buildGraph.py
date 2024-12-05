@@ -1,7 +1,7 @@
 import graphviz
 from usandoLibArvore import arvore_futebol, arvore_restaurant_book, arvore_restaurante, arvore_credito
 
-def visualizar_arvore(no, nome='Arvore_Decisao'):
+def visualizar_arvore(no):
     def construir_grafo(no, grafo, caminho=''):
         if no.folha:
             grafo.node(caminho, f'{no.classe}', shape='box', style='filled', color='lightgrey')
@@ -13,7 +13,7 @@ def visualizar_arvore(no, nome='Arvore_Decisao'):
                 construir_grafo(filho, grafo, novo_caminho)
     
     # Ajustando ranksep para aumentar a distância entre as camadas
-    grafo = graphviz.Digraph(nome, format='pdf', graph_attr={'size': '1000,1000', 'ranksep': '2'})
+    grafo = graphviz.Digraph("arvore_credito", format='pdf', graph_attr={'size': '1000,1000', 'ranksep': '2'})
     construir_grafo(no, grafo)
     grafo.render(view=False)  # Saves the file without opening it
 

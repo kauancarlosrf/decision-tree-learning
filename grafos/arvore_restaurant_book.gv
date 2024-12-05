@@ -1,0 +1,8 @@
+digraph arvore_restaurant_book {
+	graph [ranksep=2 size="1000,1000"]
+	"" [label=Alt]
+	"" -> "->No" [label=No]
+	"->No" [label=No color=lightgrey shape=box style=filled]
+	"" -> "->Yes" [label=Yes]
+	"->Yes" [label=Yes color=lightgrey shape=box style=filled]
+}
