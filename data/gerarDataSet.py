@@ -2,7 +2,7 @@ import random
 import pandas as pd
 
 # Definindo os atributos possíveis
-atributos = {
+atributos_credito = {
     'idade': [25, 30, 35, 40, 45],
     'renda_mensal': [2000, 3000, 4000, 5000, 6000],
     'score_credito': [600, 650, 700, 750, 800],
@@ -24,18 +24,29 @@ atributos = {
     'tempo_residencia_atual': [1, 3, 5, 10]
 }
 
+atributos_restaurant_book = {
+    'Alt': ['Yes', 'No'],
+    'Bar': ['Yes', 'No'],
+    'Fri': ['Yes', 'No'],
+    'Hun': ['Yes', 'No'],
+    'Pat': ['Some', 'Full', 'None'],
+    'Price': ['barato', 'intermediario', 'caro'],
+    'Rain': ['Yes', 'No'],
+    'Res': ['Yes', 'No'],
+    'Type': ['Burger', 'French', 'Thai', 'Italian'],
+    'Est': ['0-10', '10-30', '30-60', 'acima60'],
+}
+
 # Geração de n exemplos
 dados = []
-for _ in range(10000):
-    exemplo = {atributo: random.choice(valores) for atributo, valores in atributos.items()}
+for _ in range(100):
+    exemplo = {atributo: random.choice(valores) for atributo, valores in atributos_restaurant_book.items()}
     # A decisão (sim ou não) será gerada aleatoriamente, mas de forma equilibrada
     exemplo['decisao*'] = random.choice(['sim', 'não'])
     dados.append(exemplo)
 
 # Criando o DataFrame
 df = pd.DataFrame(dados)
-
 # Salvando em um arquivo CSV
-df.to_csv('dataset_credito_10000_linhas_balanceadas.csv', index=False)
-
+df.to_csv('./dataset_restaurant_100_linhas.csv', index=False)
 print(df.head())

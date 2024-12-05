@@ -81,9 +81,7 @@ dataSetRestaurantBook = [
     {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "decisao*": "Yes"},
     {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "None", "Price": "$", "Rain": "No", "Res": "No", "Type": "Thai", "Est": "30-60", "decisao*": "No"},
     {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$", "Rain": "No", "Res": "No", "Type": "Burger", "Est": "0-10", "decisao*": "Yes"}
-    
 ]
-
 
 dataSetRestaurantBook2 = [
     {"Alt": "Yes", "Bar": "No", "Fri": "Yes", "Hun": "No", "Pat": "Some", "Price": "$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": "0-10", "decisao*": "Yes"},
@@ -140,5 +138,4 @@ dataSetRestaurantBook2 = [
     {"Alt": "No", "Bar": "Yes", "Fri": "No", "Hun": "Yes", "Pat": "Some", "Price": "$$", "Rain": "No", "Res": "Yes", "Type": "Burger", "Est": ">60", "decisao*": "No"},
     {"Alt": "Yes", "Bar": "No", "Fri": "Yes", "Hun": "Yes", "Pat": "Full", "Price": "$$", "Rain": "Yes", "Res": "Yes", "Type": "Thai", "Est": "10-30", "decisao*": "Yes"},
     {"Alt": "Yes", "Bar": "Yes", "Fri": "Yes", "Hun": "No", "Pat": "Full", "Price": "$$$", "Rain": "Yes", "Res": "Yes", "Type": "Italian", "Est": ">60", "decisao*": "No"},   
-
 ]

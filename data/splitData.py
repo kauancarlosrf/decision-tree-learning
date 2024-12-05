@@ -5,4 +5,4 @@ def split_data(dataFrame):
   df_validacao = dataFrame.sample(frac=0.1, random_state=42).reset_index(drop=True)
   df_treino = dataFrame.drop(df_validacao.index).reset_index(drop=True)
   
-  return df_validacao, df_treino
+  return df_treino, df_validacao

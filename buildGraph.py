@@ -20,4 +20,4 @@ def visualizar_arvore(no):
 #visualizar_arvore(arvore_restaurant_book)
 #visualizar_arvore(arvore_futebol)
 #visualizar_arvore(arvore_restaurante)
-visualizar_arvore(arvore_credito)
+#visualizar_arvore(arvore_credito)
